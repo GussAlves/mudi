@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<div th:each="order : ${orders}">
+    <div th:text="${order.productName}">Product name</div>
+    <div>Price: R$<span th:text="${order.productPrice}">200,99</span></div>
+    <div>Delivery Date: <span>10/05/2021</span></div>
+
+    <div>Product</div>
+    <div><input value="any url.." th:value="${order.productUrl}"></div>
+
+    <div>Description</div>
+    <div>
+        <textarea th:text="${order.productDescription}">Order description</textarea>
+    </div>
+    
+    <div>
+        <img src="#" th:src="${order.productImage}">
+    </div>
+</div>
+
+</body>
+</html>
