@@ -22,7 +22,6 @@ public class HomeController {
         order.setProductDescription("any description..");
         order.setProductImage("https://images-na.ssl-images-amazon.com/images/I/61t7877TYES._SL1464_.jpg");
 
-
         List<Order> orders = Arrays.asList(order);
         model.addAttribute("orders", orders);
 
