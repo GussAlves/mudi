@@ -1,10 +1,17 @@
 package com.gussalves.mvc.mudi.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Order {
+@Entity
+public class ProductOrder {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String productName;
     private BigDecimal productPrice;
@@ -13,7 +20,7 @@ public class Order {
     private String productDescription;
     private String productImage;
 
-    public Order() {
+    public ProductOrder() {
     }
 
     public Long getId() {

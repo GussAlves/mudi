@@ -7,8 +7,19 @@
     <title>Home</title>
 </head>
 <body>
-
 <div class="container">
+    <div class="jumbotron mb-0">
+        <h1 class="display-4">My Orders</h1>
+    </div>
+    <nav class="navbar navbar-expand navbar-light bg-light justify-content-between  mb-3">
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">All</a>
+            <a href="#" class="nav-item nav-link">Pending</a>
+            <a href="#" class="nav-item nav-link">Approved</a>
+            <a href="#" class="nav-item nav-link">Delivery</a>
+        </div>
+        <a href="/order/form"><button class="btn btn-outline-secondary my-2 my-sm-0">New</button></a>
+    </nav>
     <div th:each="order : ${orders}">
         <div class="card-header" th:text="${order.productName}">Product name</div>
         <div class="card-body">
@@ -22,7 +33,8 @@
                     <div><input class="form-control" value="any url.." th:value="${order.productUrl}"></div>
                     <div>Description</div>
                     <div>
-                        <textarea class="form-control" th:text="${order.productDescription}">Order description</textarea>
+                        <textarea class="form-control"
+                                  th:text="${order.productDescription}">Order description</textarea>
                     </div>
                 </div>
                 <div class="col-12 col-sm-4">
