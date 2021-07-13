@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>New Order</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron mb-3">
+        <h1 class="display-4">New Order</h1>
+    </div>
+
+    <form action="/order/new" method="post" class="mr-3 p-3 border rounded">
+        <div class="form-group">
+            <div class="form-group">
+                <label for="productName">Product</label>
+                <input type="text" name="productName" class="form-control" placeholder="Product's name"/>
+                <small class="form-text text-muted">Inform the name of the product</small>
+            </div>
+            <div class="form-group">
+                <label for="productUrl">Url</label>
+                <input type="text" name="productUrl" class="form-control" placeholder="Product's Url"/>
+                <small class="form-text text-muted">Search a website for the url of the product and paste it here to
+                    help get buyers</small>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Imagem</label>
+                <input type="text" name="productImage" class="form-control" placeholder="Product's image"/>
+                <small class="form-text text-muted">Inform the name of the product</small>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea class="form-control"
+                          aria-label="With textarea">Add details that will help the buyer</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
