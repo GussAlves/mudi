@@ -12,27 +12,36 @@
         <h1 class="display-4">New Order</h1>
     </div>
 
-    <form action="/order/new" method="post" class="mr-3 p-3 border rounded">
+    <form action="/order/new" th:object="${newProductOrderForm}" method="post" class="mr-3 p-3 border rounded">
         <div class="form-group">
             <div class="form-group">
                 <label for="productName">Product</label>
-                <input type="text" name="productName" class="form-control" placeholder="Product's name"/>
+                <input type="text" th:field="*{productName}" th:errorclass="is-invalid" class="form-control" placeholder="Product's name"/>
                 <small class="form-text text-muted">Inform the name of the product</small>
+                <div class="invalid-feedback" th:errors="*{productName}">
+                    error product name
+                </div>
             </div>
             <div class="form-group">
                 <label for="productUrl">Url</label>
-                <input type="text" name="productUrl" class="form-control" placeholder="Product's Url"/>
+                <input type="text" th:field="*{productUrl}" class="form-control" th:errorclass="is-invalid" placeholder="Product's Url"/>
                 <small class="form-text text-muted">Search a website for the url of the product and paste it here to
                     help get buyers</small>
+                <div class="invalid-feedback" th:errors="*{productUrl}">
+                    error product url
+                </div>
             </div>
             <div class="form-group">
                 <label for="productImage">Imagem</label>
-                <input type="text" name="productImage" class="form-control" placeholder="Product's image"/>
+                <input type="text" th:field="*{productImage}" class="form-control" th:errorclass="is-invalid" placeholder="Product's image"/>
                 <small class="form-text text-muted">Inform the name of the product</small>
+                <div class="invalid-feedback" th:errors="*{productImage}">
+                    error product image
+                </div>
             </div>
             <div class="form-group">
                 <label for="productDescription">Description</label>
-                <textarea class="form-control" name="productDescription" placeholder="Add details that will help the buyer"
+                <textarea class="form-control" th:field="*{productDescription}" placeholder="Add details that will help the buyer"
                           aria-label="With textarea"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>

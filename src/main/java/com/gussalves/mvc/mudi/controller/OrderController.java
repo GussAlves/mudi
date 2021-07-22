@@ -5,8 +5,11 @@ import com.gussalves.mvc.mudi.model.ProductOrder;
 import com.gussalves.mvc.mudi.repository.ProductOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("order")
@@ -16,14 +19,18 @@ public class OrderController {
     private ProductOrderRepository orderRepository;
 
     @RequestMapping("form")
-    public String newOrder() {
+    public String newOrder(NewProductOrderForm newProductOrderForm) {
         return "order/form";
     }
 
     @PostMapping("new")
-    public String saveNewOrder(NewProductOrderForm newProductOrderForm) {
-        ProductOrder produtoOrder = newProductOrderForm.toOrder();
-        orderRepository.save(produtoOrder);
-        return "order/form";
+    public String saveNewOrder(@Valid NewProductOrderForm newProductOrderForm, BindingResult result) {
+
+        if (result.hasErrors())
+            return "order/form";
+
+        ProductOrder productOrder = newProductOrderForm.toOrder();
+        orderRepository.save(productOrder);
+        return "home";
     }
 }

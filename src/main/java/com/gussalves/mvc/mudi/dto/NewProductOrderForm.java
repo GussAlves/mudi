@@ -2,10 +2,17 @@ package com.gussalves.mvc.mudi.dto;
 
 import com.gussalves.mvc.mudi.model.ProductOrder;
 
+import javax.validation.constraints.NotBlank;
+
 public class NewProductOrderForm {
 
+    @NotBlank
     private String productName;
+
+    @NotBlank(message="Please enter a valid URL")
     private String productUrl;
+
+    @NotBlank(message="Must not be blank")
     private String productImage;
     private String productDescription;
 

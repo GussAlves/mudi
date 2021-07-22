@@ -26,6 +26,8 @@ services:
       - 8081:8080
     networks:
       - backend
+    depends_on:
+      - "db"
 
 networks:
   backend:
