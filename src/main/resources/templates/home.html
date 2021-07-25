@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Home</title>
-</head>
+<head th:replace="~{base :: head(value='My Orders')}"></head>
 <body>
+<div th:replace="~{base :: logo}"></div>
 <div class="container">
-    <div class="jumbotron mb-0">
-        <h1 class="display-4">My Orders</h1>
-    </div>
-    <nav class="navbar navbar-expand navbar-light bg-light justify-content-between  mb-3">
+    <div th:replace="~{base :: title(value='My Orders')}"></div>
+
+    <nav class="navbar navbar-expand navbar-light bg-light justify-content-between mb-3">
         <div class="navbar-nav">
             <a href="#" class="nav-item nav-link active">All</a>
             <a href="#" class="nav-item nav-link">Pending</a>
@@ -20,7 +15,7 @@
         </div>
         <a href="/order/form"><button class="btn btn-outline-secondary my-2 my-sm-0">New</button></a>
     </nav>
-    <div th:each="order : ${orders}">
+    <div th:each="order : ${orders}" class="card mb-3">
         <div class="card-header" th:text="${order.productName}">Product name</div>
         <div class="card-body">
             <div class="row">
