@@ -31,6 +31,6 @@ public class OrderController {
 
         ProductOrder productOrder = newProductOrderForm.toOrder();
         orderRepository.save(productOrder);
-        return "order/form";
+        return "redirect:/home";
     }
 }

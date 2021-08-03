@@ -1,6 +1,7 @@
 package com.gussalves.mvc.mudi.dto;
 
 import com.gussalves.mvc.mudi.model.ProductOrder;
+import com.gussalves.mvc.mudi.model.ProductStatus;
 
 import javax.validation.constraints.NotBlank;
 
@@ -54,7 +55,7 @@ public class NewProductOrderForm {
         order.setProductUrl(getProductUrl());
         order.setProductDescription(getProductDescription());
         order.setProductImage(getProductImage());
-
+        order.setStatus(ProductStatus.PENDING);
         return order;
     }
 }

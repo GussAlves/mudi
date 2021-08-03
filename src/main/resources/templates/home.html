@@ -15,14 +15,20 @@
         </div>
         <a href="/order/form"><button class="btn btn-outline-secondary my-2 my-sm-0">New</button></a>
     </nav>
+
     <div th:each="order : ${orders}" class="card mb-3">
-        <div class="card-header" th:text="${order.productName}">Product name</div>
+        <th:block th:switch="${order.status.name()}">
+            <div th:case="'PENDING'" class="card-header alert-warning" th:text="${order.productName}">Product name</div>
+            <div th:case="'APPROVED'" class="card-header alert-success" th:text="${order.productName}">Product name</div>
+            <div th:case="'DELIVERY'" class="card-header alert-dark" th:text="${order.productName}">Product name</div>
+        </th:block>
+
         <div class="card-body">
             <div class="row">
                 <div class="col-12 col-sm-8 mb-3">
                     <div class="row">
                         <div class="col-md-5">Price: R$<span th:text="${order.productPrice}">200,99</span></div>
-                        <div class="col-md-7">Delivery Date: <span>10/05/2021</span></div>
+                        <div class="col-md-7">Delivery Date: <span th:text="${order.deliveryDate}">10/05/2021</span></div>
                     </div>
                     <div>Product</div>
                     <div><input class="form-control" value="any url.." th:value="${order.productUrl}"></div>

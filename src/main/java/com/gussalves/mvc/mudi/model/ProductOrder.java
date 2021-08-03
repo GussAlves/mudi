@@ -1,9 +1,6 @@
 package com.gussalves.mvc.mudi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -20,7 +17,18 @@ public class ProductOrder {
     private String productDescription;
     private String productImage;
 
+    @Enumerated(EnumType.STRING)
+    private ProductStatus status;
+
     public ProductOrder() {
+    }
+
+    public ProductStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProductStatus status) {
+        this.status = status;
     }
 
     public Long getId() {
