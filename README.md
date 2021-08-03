@@ -30,8 +30,8 @@ Para prosseguir temos que subir nosso banco de dados *MariaDB*, para isso vamos 
 docker-compose up -d
 ```
 > Ele irá subir o banco de dados MariaDb junto com um adiministrador, você pode consultar na url http://localhost:8081
-
-> *Usuário: root | Senha: root*
+* _Usuário: root_  
+* _Senha: root_
 
 Com o banco de dados operacional vamos iniciar nosso projeto em spring boot com o maven, podemos realizar essa ação com o comando: 
 ```sh
