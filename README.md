@@ -7,14 +7,15 @@ Projeto construido junto aos estudos de Spring/Thymeleaf pela plataforma Alura.
 
 ## Instalação:
 Para este projeto foi utilizado as seguintes tecnologias: 
-    - Docker; 
-    - Docker Compose;
-    - Maven;
-    - Java 11; 
-    - Spring-boot;
-    - git;
-    - MariaDB;
-    - Bootstrap;
+    
+    * Docker
+    * Docker Compose
+    * Maven
+    * Java 11 
+    * Spring-boot
+    * git
+    * MariaDB
+    * Bootstrap
     
 Para iniciar a instalação, realizei um clone do repositório em algum repositório de sua máquina com o comando git clone.
 
