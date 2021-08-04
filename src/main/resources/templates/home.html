@@ -8,10 +8,10 @@
 
     <nav class="navbar navbar-expand navbar-light bg-light justify-content-between mb-3">
         <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active">All</a>
-            <a href="/home/pending" class="nav-item nav-link">Pending</a>
-            <a href="/home/approved" class="nav-item nav-link">Approved</a>
-            <a href="/home/delivery" class="nav-item nav-link">Delivery</a>
+            <a th:classappend="${status} == null ? 'active'" href="/home" class="nav-item nav-link">All</a>
+            <a th:classappend="${status} == 'pending' ? 'active'" href="/home/pending" class="nav-item nav-link">Pending</a>
+            <a th:classappend="${status} == 'approved' ? 'active'" href="/home/approved" class="nav-item nav-link">Approved</a>
+            <a th:classappend="${status} == 'delivery' ? 'active'" href="/home/delivery" class="nav-item nav-link">Delivery</a>
         </div>
         <a href="/order/form"><button class="btn btn-outline-secondary my-2 my-sm-0">New</button></a>
     </nav>
@@ -27,8 +27,8 @@
             <div class="row">
                 <div class="col-12 col-sm-8 mb-3">
                     <div class="row">
-                        <div class="col-md-5">Price: R$<span th:text="${order.productPrice}">200,99</span></div>
-                        <div class="col-md-7">Delivery Date: <span th:text="${order.deliveryDate}">10/05/2021</span></div>
+                        <div class="col-md-5">Price: R$ <span th:if="${order.productPrice} != null"  th:text="${#numbers.formatDecimal(order.productPrice, 3, 'POINT', 2, 'COMMA')}">200,99</span></div>
+                        <div class="col-md-7">Delivery Date: <span th:text="${#temporals.format(order.deliveryDate, 'dd/MM/yyyy')}">10/05/2021</span></div>
                     </div>
                     <div>Product</div>
                     <div><input class="form-control" value="any url.." th:value="${order.productUrl}"></div>
