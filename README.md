@@ -7,15 +7,14 @@ Projeto construido junto aos estudos de Spring/Thymeleaf pela plataforma Alura.
 
 ## Instalação:
 Para este projeto foi utilizado as seguintes tecnologias: 
-    
-    * Docker
-    * Docker Compose
-    * Maven
-    * Java 11 
-    * Spring-boot
-    * git
-    * MariaDB
-    * Bootstrap
+    - Docker; 
+    - Docker Compose;
+    - Maven;
+    - Java 11; 
+    - Spring-boot;
+    - git;
+    - MariaDB;
+    - Bootstrap;
     
 Para iniciar a instalação, realizei um clone do repositório em algum repositório de sua máquina com o comando git clone.
 
@@ -30,8 +29,8 @@ Para prosseguir temos que subir nosso banco de dados *MariaDB*, para isso vamos 
 docker-compose up -d
 ```
 > Ele irá subir o banco de dados MariaDb junto com um adiministrador, você pode consultar na url http://localhost:8081
-* _Usuário: root_  
-* _Senha: root_
+
+> *Usuário: root | Senha: root*
 
 Com o banco de dados operacional vamos iniciar nosso projeto em spring boot com o maven, podemos realizar essa ação com o comando: 
 ```sh
