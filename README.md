@@ -7,6 +7,7 @@ Projeto construido junto aos estudos de Spring/Thymeleaf pela plataforma Alura.
 
 ## Instalação:
 Para este projeto foi utilizado as seguintes tecnologias: 
+    
     - Docker; 
     - Docker Compose;
     - Maven;
