@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-12 col-sm-8 mb-3">
                     <div class="row">
-                        <div class="col-md-5">Price: R$ <span th:if="${order.productPrice} != null"  th:text="${#numbers.formatDecimal(order.productPrice, 3, 'POINT', 2, 'COMMA')}">200,99</span></div>
+                        <div class="col-md-5">Price: R$ <span th:if="${order.productPrice} != null"  th:text="${#numbers.formatDecimal(order.productPrice, 1, 'POINT', 2, 'COMMA')}">200,99</span></div>
                         <div class="col-md-7">Delivery Date: <span th:text="${#temporals.format(order.deliveryDate, 'dd/MM/yyyy')}">10/05/2021</span></div>
                     </div>
                     <div>Product</div>
