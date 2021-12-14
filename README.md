@@ -18,6 +18,9 @@ Para este projeto foi utilizado as seguintes tecnologias:
     - Bootstrap;
     
 Para iniciar a instalação, realizei um clone do repositório em algum repositório de sua máquina com o comando git clone.
+```sh
+git clone https://github.com/GussAlves/mudi-app
+```
 
 Após instalar em sua máquina, é necessário baixar as dependencias do projeto, para isso vamos utilizar o Maven, abra seu terminal e navegue até o reposítorio do projeto e rode o seguinte comando: 
 ```sh
