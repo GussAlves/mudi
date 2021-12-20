@@ -2,8 +2,12 @@
 O Mudi tem como foco principal atender as demandas de compras no exterior, uma vez que seu principal proposíto é fazer o intermédio entre o usuário que está viajando e o usuário que gostaria de realizar uma compra no exterior. Ambos se alinham antes da compra e ao voltar de viagem é realizado realizado o envio da mercadoria. 
 
 
-## Motivações 
-Projeto construido junto aos estudos de Spring/Thymeleaf pela plataforma Alura. 
+## O Projeto 
+Repositório seguindo o curso 'Spring MVC: Crie um web app com Thymeleaf e Bootstrap' da Alura por Arthur Parahyba. 
+
+Criado para entender mais sobre o funcionamento do framework Spring. 
+
+Link do curso, para quem possa se interessar: https://cursos.alura.com.br/course/spring-mvc-thymeleaf-bootstrap.
 
 ## Instalação:
 Para este projeto foi utilizado as seguintes tecnologias: 
@@ -13,11 +17,15 @@ Para este projeto foi utilizado as seguintes tecnologias:
     - Maven;
     - Java 11; 
     - Spring-boot;
+    - Spring-security
     - git;
     - MariaDB;
     - Bootstrap;
     
 Para iniciar a instalação, realizei um clone do repositório em algum repositório de sua máquina com o comando git clone.
+```sh
+git clone https://github.com/GussAlves/mudi-app
+```
 
 Após instalar em sua máquina, é necessário baixar as dependencias do projeto, para isso vamos utilizar o Maven, abra seu terminal e navegue até o reposítorio do projeto e rode o seguinte comando: 
 ```sh
