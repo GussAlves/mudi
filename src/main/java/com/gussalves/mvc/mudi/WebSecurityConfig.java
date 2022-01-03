@@ -13,14 +13,13 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .anyRequest()
-                .authenticated()
+        http
+                .authorizeRequests()
+                   .anyRequest().authenticated()
                 .and()
-                .httpBasic(); // for httpBasic browser create template
+                    .httpBasic();
     }
 
     @Bean
@@ -29,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UserDetails user =
                 User.withDefaultPasswordEncoder()
                         .username("gusta")
-                        .password("gusta")
+                        .password("12345")
                         .roles("ADM")
                         .build();
 
