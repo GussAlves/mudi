@@ -18,4 +18,9 @@ public class HelloController {
         model.addAttribute("name", "World Hello");
         return "hello";
     }
+    
+    @GetMapping("/")
+    String home() {
+    	return "home";
+    }
 }
